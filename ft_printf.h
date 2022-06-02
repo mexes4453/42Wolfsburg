@@ -13,8 +13,8 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
-# include "libft.h"
-# include <stdio.h>
+# include <stddef.h>
+# include <unistd.h>
 //--- FUNCTION DECLARATION ---
 int		ft_printf(const char *s, ...);
 int		ft_printf_c(char c);
@@ -26,5 +26,4 @@ int		ft_printf_xx(char x_chr, unsigned int x);
 //--- HELPER FUNCTION ---
 size_t	ft_strlen(const char *s);
 int		ft_printf_nbr_base(long long unsigned n, size_t base, int c);
-//int     ft_printf_percent(int *idx, char);
 #endif //FT_PRINTF_H
