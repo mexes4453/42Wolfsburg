@@ -14,15 +14,12 @@
 
 int	ft_printf_p(void *p)
 {
-	int	len;
+	int						len;
+	unsigned long long int	ptr;
 
 	len = 0;
-	if (p == 0 || p == NULL)
-	{
-		len += write(1, "(nil)", 5);
-		return (len);
-	}
+	ptr = (unsigned long long int)p;
 	len += write(1, "0x", 2);
-	len += ft_printf_nbr_base((long long unsigned int)p, 16, 0);
+	len += ft_printf_nbr_base(ptr, 16, 0);
 	return (len);
 }
